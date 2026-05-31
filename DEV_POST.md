@@ -3,7 +3,6 @@ title: "I Built an AI Interview Coach That Turns Any Resume Into a Personalized 
 published: false
 description: "A full-stack resume analyzer that scores your resume, extracts your skills, generates tailored interview questions, and suggests improvements — all running locally with zero external API calls."
 tags: [hermesagent, react, python, webdev]
-cover_image: 
 ---
 
 *This is a submission for the [Hermes Agent Challenge](https://dev.to/challenges/hermes-agent-2026-05-15)*
