@@ -3,7 +3,6 @@ const multer = require("multer");
 const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
-const os = require("os");
 const { spawn } = require("child_process");
 
 const app = express();
@@ -34,7 +33,8 @@ app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
 // ---------------------------------------------------------------------------
 // Multer: accept only PDFs, write to disk (avoids UTF-8 buffer issues)
 // ---------------------------------------------------------------------------
-const tmpDir = os.tmpdir();
+const tmpDir = path.join(__dirname, "tmp");
+fs.mkdirSync(tmpDir, { recursive: true });
 
 const upload = multer({
   dest: tmpDir,
@@ -56,10 +56,8 @@ const upload = multer({
 // ---------------------------------------------------------------------------
 function extractResumeText(pdfPath) {
   return new Promise((resolve, reject) => {
-    const scriptPath = path.join(__dirname, "extract_resume.py");
-    // Use 'python3' on Linux/Mac, fallback to 'python' on Windows if needed, 
-    // but in Docker/Render it will be 'python3'
-    const pythonExe = process.env.PYTHON_CMD || "python3";
+    const scriptPath = path.join("C:", "Users", "ansuj", "interview-coach", "extract_resume.py");
+    const pythonExe = path.join("C:", "Users", "ansuj", ".venvs", "interview-coach", "Scripts", "python.exe");
 
     const proc = spawn(pythonExe, [scriptPath, pdfPath, "--json"], {
       env: { ...process.env, PYTHONIOENCODING: "utf-8" },

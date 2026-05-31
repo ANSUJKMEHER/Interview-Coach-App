@@ -32,8 +32,6 @@ The entire thing runs locally. No OpenAI key. No GPT calls. No cost per request.
 
 ## Demo
 
-<!-- TODO: Add your live demo URL below -->
-**🚀 Try it out live:** [Link to Live Demo](YOUR_LIVE_DEMO_URL)
 
 <!-- TODO: Add your video walkthrough URL below (YouTube or video file link) -->
 **📹 Video Walkthrough:**
