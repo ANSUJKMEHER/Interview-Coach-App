@@ -32,33 +32,42 @@ The entire thing runs locally. No OpenAI key. No GPT calls. No cost per request.
 
 ## Demo
 
+<!-- TODO: Add your live demo URL below -->
+**🚀 Try it out live:** [Link to Live Demo](YOUR_LIVE_DEMO_URL)
+
+<!-- TODO: Add your video walkthrough URL below (YouTube or video file link) -->
+**📹 Video Walkthrough:**
+{% embed YOUR_YOUTUBE_OR_VIDEO_URL %}
+
+---
+
 <!-- TODO: Replace placeholder URLs with your actual uploaded image URLs, then uncomment each line -->
 
 **Upload Zone** — Drag & drop your resume PDF:
-<!-- ![Upload Zone](YOUR_UPLOAD_ZONE_SCREENSHOT_URL) -->
+![Drag & drop your resume PDF](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4e9rm8mm6fo1udp27cyv.png)
 
 **Resume Score** — Circular indicator + five-dimension breakdown:
-<!-- ![Resume Score](YOUR_RESUME_SCORE_SCREENSHOT_URL) -->
+
+![Resume Score](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l2t2ypsudqfowquvs38b.png)
 
 **Skills Summary** — Auto-detected technologies grouped by category:
-<!-- ![Skills Summary](YOUR_SKILLS_SUMMARY_SCREENSHOT_URL) -->
+
+![Skills Summary](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xj8bzyerf8ykhnqrfz3x.png)
 
 **Technical Questions** — Searchable, filterable, with difficulty badges:
-<!-- ![Technical Questions](YOUR_TECHNICAL_QUESTIONS_SCREENSHOT_URL) -->
+
+![Technical Questions](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wy1kb517i096ct8g5ge6.png)
 
 **HR Questions** — Category-tagged with STAR-method tips:
-<!-- ![HR Questions](YOUR_HR_QUESTIONS_SCREENSHOT_URL) -->
+
+![HR Questions](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hm3s6pesihuntroskgkd.png)
 
 **Improvement Suggestions** — Prioritized by impact:
-<!-- ![Suggestions](YOUR_SUGGESTIONS_SCREENSHOT_URL) -->
 
-**Light mode:**
-<!-- ![Light Mode](YOUR_LIGHT_MODE_SCREENSHOT_URL) -->
+![Improvement Suggestions](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pntvyd8b2k8v0th10gv0.png)
 
 **Analysis engine output** — scores, skills, and tailored questions in the terminal:
 <!-- ![Analysis Output](YOUR_ANALYSIS_OUTPUT_SCREENSHOT_URL) -->
-
-<!-- TODO: Optionally add a GIF or video walkthrough -->
 
 ## Code
 
@@ -96,7 +105,8 @@ The entire thing runs locally. No OpenAI key. No GPT calls. No cost per request.
 Hermes Agent was involved at every stage of building this project — not as a magic "generate my app" button, but as a collaborative development partner that I could iterate with in real time.
 
 <!-- TODO: Add your Hermes Agent CLI screenshot below -->
-<!-- ![Hermes Agent CLI](YOUR_HERMES_CLI_SCREENSHOT_URL) -->
+
+![Hermes Agent CLI](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0lznys7mld0kt6yc71oa.png)
 
 ### Architecture Decisions
 
@@ -109,14 +119,16 @@ Hermes also helped me decide on the three-layer architecture — React frontend,
 Here's Hermes planning the approach and setting up the Python environment:
 
 <!-- TODO: Add your Hermes architecture planning + pymupdf install screenshot -->
-<!-- ![Hermes planning and installing dependencies](YOUR_HERMES_PLANNING_SCREENSHOT_URL) -->
+
+![Architecture Decisions](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n0yoz3a93tq9gij46bws.png)
 
 ### Implementation: The Analysis Engine
 
 Hermes scaffolded all 16 source files, installed dependencies, and verified the frontend build — all in a single session:
 
 <!-- TODO: Add your Hermes project scaffolding screenshot -->
-<!-- ![Hermes scaffolding the project](YOUR_HERMES_SCAFFOLDING_SCREENSHOT_URL) -->
+
+![Implementation: The Analysis Engine](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bm49nsp2h5ryqglxa3vj.png)
 
 The heart of the application is the `analyzeResume()` function in `server.js` — around 300 lines of scoring, extraction, and question generation logic. Hermes helped me build this incrementally.
 
@@ -178,7 +190,8 @@ This fixed the crash without losing any text content. Hermes knew exactly where 
 Hermes drove several UX improvements that I wouldn't have prioritized on my own. Here's Hermes refactoring the `FileUpload` component to add progress tracking and cancel support — you can see the diff of what changed:
 
 <!-- TODO: Add your Hermes code diff screenshot -->
-<!-- ![Hermes refactoring FileUpload](YOUR_HERMES_DIFF_SCREENSHOT_URL) -->
+
+![Feature Refinement](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ld71cexycl6j4465uev1.png)
 
 - **Duplicate detection** — When multiple skill categories triggered similar questions, Hermes suggested the deduplication step with normalized comparison, then padding with fallback questions to guarantee exactly 20 technical and 10 HR.
 - **AbortController integration** — Hermes wired up the upload cancel button to actually abort the in-flight fetch request and clean up state, rather than just hiding the progress bar.
@@ -192,7 +205,8 @@ Working with Hermes, I went from an empty directory to a functioning full-stack 
 After writing the files, Hermes automatically verified the build and ran syntax checks before moving on:
 
 <!-- TODO: Add your Hermes build verification screenshot -->
-<!-- ![Hermes verifying the build](YOUR_HERMES_BUILD_VERIFY_SCREENSHOT_URL) -->
+
+![Hermes build verification](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lyhh9lien60vcg9qnyf0.png)
 
 When I hit the Unicode bug, Hermes fixed it in minutes rather than the hour I'd have spent reading Python encoding documentation. When I wanted to add search and filtering to the questions list, Hermes built the entire `QuestionsList` component with search, difficulty filter, topic filter, copy-per-question, and copy-all in one pass.
 
